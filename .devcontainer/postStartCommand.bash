@@ -4,7 +4,7 @@
 # shellcheck disable=SC2088
 git config --global include.path '~/.gitconfig.aliases'
 
-REPO_DIR='/workspaces/subprocessing-py'
+REPO_DIR='/workspaces/subprocessmagic-py'
 if [ -d "${REPO_DIR}" ]; then
 	git config --global --add safe.directory "${REPO_DIR}"
 

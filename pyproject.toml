@@ -6,13 +6,13 @@ authors = ["dominicparga <dominic.parga@icloud.com>"]
 maintainers = ["dominicparga <dominic.parga@icloud.com>"]
 readme = "README.md"
 license = "Apache-2.0"
-packages = [{ include = "subprocessing" }]
+packages = [{ include = "subprocessmagic" }]
 # include = [{ path = "dependencies", format = ["sdist", "wheel"] }]
-homepage = "https://github.com/dominicparga/subprocessing-py"
-repository = "https://github.com/dominicparga/subprocessing-py"
-documentation = "https://github.com/dominicparga/subprocessing-py"
+homepage = "https://github.com/dominicparga/subprocessmagic-py"
+repository = "https://github.com/dominicparga/subprocessmagic-py"
+documentation = "https://github.com/dominicparga/subprocessmagic-py"
 [tool.poetry.urls]
-Issues = "https://github.com/dominicparga/subprocessing-py/issues"
+Issues = "https://github.com/dominicparga/subprocessmagic-py/issues"
 
 
 [build-system]
