@@ -1,0 +1,13 @@
+# custom
+/custom/
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+.pytest_cache/
+
+# Environments
+.env
+.venv/

@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "subprocessmagic"
+version = "1.0.0"
+description = "Subprocessing to simplify interaction with os-tools"
+authors = ["dominicparga <dominic.parga@icloud.com>"]
+maintainers = ["dominicparga <dominic.parga@icloud.com>"]
+readme = "README.md"
+license = "Apache-2.0"
+packages = [{ include = "subprocessing" }]
+# include = [{ path = "dependencies", format = ["sdist", "wheel"] }]
+homepage = "https://github.com/dominicparga/subprocessing-py"
+repository = "https://github.com/dominicparga/subprocessing-py"
+documentation = "https://github.com/dominicparga/subprocessing-py"
+[tool.poetry.urls]
+Issues = "https://github.com/dominicparga/subprocessing-py/issues"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+# binaries and extras
+[tool.poetry.scripts]
+# -
+[tool.poetry.extras]
+# -
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+errorhandling = "~1"
+# extras' dependencies, hence optional by default
+# -
+[tool.poetry.group.dev.dependencies]
+# linting and formatting
+ruff = "*"
+# python testing
+pytest = "*"
