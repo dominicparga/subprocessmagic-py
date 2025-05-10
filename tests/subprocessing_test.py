@@ -49,7 +49,7 @@ def test_process():
 	return_code = subprocessmagic.process(command=command, logger=_logger)
 	_assert_result(
 		expected=_Result(output=_EXPECTED_STDOUT, return_code=_EXPECTED_RETURN_CODE, error=_EXPECTED_STDERR),
-		actual=_Result(output=output, return_code=return_code, error=error),
+		actual=_Result(output=output, return_code=return_code.intvalue, error=error),
 	)
 
 
@@ -58,7 +58,7 @@ def test_run():
 	output, return_code, error = subprocessmagic.run(command=command)
 	_assert_result(
 		expected=_Result(output=_EXPECTED_STDOUT, return_code=_EXPECTED_RETURN_CODE, error=_EXPECTED_STDERR),
-		actual=_Result(output=output, return_code=return_code, error=error),
+		actual=_Result(output=output, return_code=return_code.intvalue, error=error),
 	)
 
 
@@ -67,5 +67,5 @@ def test_shell():
 	output, return_code, error = subprocessmagic.shell(command=command)
 	_assert_result(
 		expected=_Result(output=_EXPECTED_STDOUT, return_code=_EXPECTED_RETURN_CODE, error=_EXPECTED_STDERR),
-		actual=_Result(output=output, return_code=return_code, error=error),
+		actual=_Result(output=output, return_code=return_code.intvalue, error=error),
 	)
