@@ -124,7 +124,7 @@ def process(
 		# TODO 2024.11.16 dominicparga check .communicate() vs .wait() https://stackoverflow.com/a/30984882
 		# The .communicate() doesn't work, probably because the yield-routine consumes the output.
 		return_code = process.wait(timeout=None)
-		return return_code
+		return ErrorCode(return_code)
 
 
 def _run(
@@ -134,7 +134,7 @@ def _run(
 		command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, encoding="utf-8", cwd=cwd, env=env, shell=is_shell
 	)
 	_input_args: Any = result.args
-	return result.stdout, result.returncode, result.stderr
+	return result.stdout, ErrorCode(result.returncode), result.stderr
 
 
 def run(command: list[str], cwd: Path | None = None, env: dict[str, str] | None = None) -> tuple[str, ErrorCode, str]:
